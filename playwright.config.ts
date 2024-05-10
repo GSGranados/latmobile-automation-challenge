@@ -29,10 +29,11 @@ export default defineConfig({
   ],
   ],
   use: {
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'https://demo.casino',
     viewport: { width: 1980, height: 1080 },
     ignoreHTTPSErrors: true,
     trace: 'on-first-retry',
+
     screenshot: 'only-on-failure',
     headless: false
   },
@@ -43,15 +44,6 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
 
   ],
 });
