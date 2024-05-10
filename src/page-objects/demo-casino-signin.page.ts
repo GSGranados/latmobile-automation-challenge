@@ -17,18 +17,32 @@ class DemoCasinoSignInPage {
         this.usernameErrorMessage = page.locator('[data-test="error-username"]');
     }
 
+    /**
+     * @function typeOnUsernameInput It types on the username Input
+     * @param username username to type
+     */
     async typeOnUsernameInput(username: string): Promise<void> {
         await this.usernameInput.fill(username);
     }
 
+    /**
+     * @function typeOnPasswordInput It types on the Password Input
+     * @param password the password value to type 
+     */
     async typeOnPasswordInput(password: string): Promise<void> {
         await this.passwordInput.fill(password);
     }
 
+    /**
+     * @function clickOnSignInButton It clicks on the Sign In Button
+     */
     async clickOnSignInButton(): Promise<void> {
         await this.signInButton.click();
     }
 
+    /**
+     * @function isErrorUsernamePresent It makes an assertion to check whether the username error is present 
+     */
     async isErrorUsernamePresent(): Promise<void> {
         await expect(this.usernameErrorMessage).toBeVisible({ timeout: constants.timeoutConstants.implicitTimeout })
     }

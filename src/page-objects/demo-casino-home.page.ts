@@ -25,38 +25,66 @@ class DemoCasinoHomePage {
         this.homePageRoute = "/"
     }
 
+    /**
+     * @function navigateToDemoCasino It opens the Demo casino URL
+     */
     async navigateToDemoCasino(): Promise<void> {
         await this.page.goto(this.homePageRoute);
     }
 
+    /**
+     * @function clickOnInitialPopupButton It closes the initial pop up button
+     */
     async clickOnInitialPopupButton(): Promise<void> {
         await this.closeInitialPopupButton.click();
     }
 
+    /**
+     * @function isUserInfoWrapperPresent It makes an assertion to check whether the user info
+     *  wrapper is present
+     */
     async isUserInfoWrapperPresent(): Promise<void> {
         await expect(this.userInformationWrapper).toBeVisible({ timeout: 30000 })
     }
 
+    /**
+     * @function isUserNavigatedToHomePage It checks the navigated URL was the home page one - makes an assertion
+     */
     async isUserNavigatedToHomePage(): Promise<void> {
         expect(this.page.url()).toEqual(constants.testScripConstants.demoCasinoURL);
     }
 
+    /**
+     * @function clickOnSignUpButton It clicks on the sign up button
+     */
     async clickOnSignUpButton(): Promise<void> {
         await this.homePageSignUpButton.click();
     }
 
+    /**
+     * @function clickOnSignInPopupButton It clicks on the SignIn pop up button
+     */
     async clickOnSignInPopupButton(): Promise<void> {
         await this.signInPopupButton.click();
     }
 
+    /**
+     * @function clickOnSignInButton It clicks on the Sign In button
+     */
     async clickOnSignInButton(): Promise<void> {
         await this.signInButton.click();
     }
 
+    /**
+     * @function clickOnProfileArrowButton It clicks on the Profile Arrow button
+     */
     async clickOnProfileArrowButton(): Promise<void> {
         await this.profileArrowButton.click();
     }
 
+    /**
+     * @function clickOnProfileSettingsButton It clicks on the Profile settings button
+     */
     async clickOnProfileSettingsButton(): Promise<void> {
         await this.profileSettingsButton.click();
     }

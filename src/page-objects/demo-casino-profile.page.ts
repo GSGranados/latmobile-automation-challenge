@@ -10,6 +10,9 @@ class DemoCasinoProfilePage {
         this.profileSettingsHeader = page.getByRole("heading",{name: "My Profile"})
         }
 
+    /**
+     * @function isMyProfileHeaderVisible It makes and assertion to check whether the Profile Header is visible
+     */
     async isMyProfileHeaderVisible():Promise<void>{
         await expect(this.profileSettingsHeader).toBeVisible({timeout:constants.timeoutConstants.implicitTimeout});
     }
