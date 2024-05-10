@@ -1,10 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
+require('dotenv').config();
 
-// require('dotenv').config();
-
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig({
   timeout: 30000,
   testDir: './src/tests',
@@ -35,7 +31,7 @@ export default defineConfig({
     trace: 'on-first-retry',
 
     screenshot: 'only-on-failure',
-    headless: false
+    headless: process.env.HEADLESS_MODE === "TRUE"? true: false
   },
 
   projects: [
