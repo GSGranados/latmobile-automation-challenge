@@ -39,3 +39,6 @@ Once that is installed, you can run the `npm run reports:allure` script on the i
 There is an environment variable located at  `env.template`. 
 that is called HEADLESS_MODE you can set the value to TRUE or FALSE
  - Create an .env file and copy that variable so the process.env object can utilize this value
+
+#### Important Note
+Keep in mind that since this is a Demo website, some ADS might be appearing middle execution
