@@ -1,5 +1,5 @@
 import { expect, type Locator, type Page } from '@playwright/test'
-import constants from '../../data/constants.json' assert {type: "json"}
+import constants from '../../data/constants.json'
 
 class DemoCasinoConfirmationPage {
     readonly page: Page

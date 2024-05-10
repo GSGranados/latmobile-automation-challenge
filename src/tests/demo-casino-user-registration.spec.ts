@@ -5,7 +5,7 @@ import DemoCasinoConfirmationPage from '../page-objects/demo-casino-confirmation
 import DemoCasinoProfilePage from '../page-objects/demo-casino-profile.page';
 import randomIntFromInterval from '../helpers/random-number-generator';
 import DemoCasinoSignInPage from '../page-objects/demo-casino-signin.page';
-import constants from '../../data/constants.json' assert {type: "json"}
+import constants from '../../data/constants.json'
 
 test.describe('DEMO CASINO USER FEATURES TEST SCENARIOS', () => {
 
