@@ -3,7 +3,8 @@
         "password": "Turquesa0211",
         "latmobilePrefixUsername":"latmobile-dummy-email",
         "latmobileSuffix":"@mail.com",
-        "registrationCompleteText":"Registration successfully finished!"
+        "registrationCompleteText":"Registration successfully finished!",
+        "demoCasinoURL":"https://demo.casino/"
     },
     "timeoutConstants":{
         "implicitTimeout": 30000

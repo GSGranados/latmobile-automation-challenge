@@ -1,4 +1,5 @@
 import { expect, type Locator, type Page } from '@playwright/test';
+import constants from '../../data/constants.json' assert {type: "json"}
 
 class DemoCasinoHomePage {
 
@@ -37,7 +38,7 @@ class DemoCasinoHomePage {
     }
 
     async isUserNavigatedToHomePage(): Promise<void> {
-        expect(this.page.url()).toEqual("https://demo.casino/")
+        expect(this.page.url()).toEqual(constants.testScripConstants.demoCasinoURL);
     }
 
     async clickOnSignUpButton(): Promise<void> {
